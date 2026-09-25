@@ -1,0 +1,188 @@
+:root {
+  --bg-color: #f8fafc;
+  --text-color: #0f172a;
+  --accent-color: #8b5cf6;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+  --input-bg: #f1f5f9;
+  --success-color: #10b981;
+}
+
+.dark-theme {
+  --bg-color: #0f172a;
+  --text-color: #f8fafc;
+  --accent-color: #a78bfa;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --input-bg: #1e293b;
+  --success-color: #34d399;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.nav-links li {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  color: var(--accent-color);
+}
+
+.navbar button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  opacity: 0.8;
+}
+
+.services-section {
+  width: 100%;
+  max-width: 1100px;
+  padding: 60px 40px;
+}
+
+.services-section h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.service-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--accent-color);
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.contact-section {
+  width: 100%;
+  max-width: 500px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-section h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-section input {
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.contact-section input:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+.contact-section button {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--accent-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.success-msg {
+  color: var(--success-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
